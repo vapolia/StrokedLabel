@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+        <UseMaui>true</UseMaui>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+
+        <RootNamespace>Vapolia.StrokedLabels</RootNamespace>
+
+        <!-- Target Platform Options -->
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">27.0</SupportedOSPlatformVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.90" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <None Include="..\\LICENSE.md" Pack="true" PackagePath="" />
+        <None Include="..\\README.md" Pack="true" PackagePath="" />
+        <None Include="..\\icon.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <!--  nuget configurable properties -->
+    <PropertyGroup>
+        <Version>0.0.0-pre1</Version>
+        <VersionSuffix></VersionSuffix>
+        <DefineConstants>$(DefineConstants);</DefineConstants>
+    </PropertyGroup>
+    <!--  nuget properties -->
+    <PropertyGroup>
+        <PackageId>Vapolia.StrokedLabel</PackageId>
+        <Summary>Stroked Label behavior for MAUI on iOS and Android</Summary>
+        <PackageTags>stroke border outline label text maui</PackageTags>
+        <Title>Stroked Label</Title>
+        <Description>A perfectly stroked label for MAUI on Android and iOS</Description>
+
+        <PackageVersion>$(Version)$(VersionSuffix)</PackageVersion>
+        <Product>StrokedLabel</Product>
+        <Company>Vapolia</Company>
+        <Authors>Benjamin Mayrargue</Authors>
+        <Owners>https://vapolia.eu</Owners>
+        <NeutralLanguage>en</NeutralLanguage>
+        <Copyright>© 2024 Vapolia</Copyright>
+        <RepositoryUrl>https://github.com/vapolia/StrokedLabel</RepositoryUrl>
+        <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageProjectUrl>https://github.com/vapolia/StrokedLabel</PackageProjectUrl>
+        <PackageReleaseNotes>
+            1.0.0: Initial release
+        </PackageReleaseNotes>
+    </PropertyGroup>
+    
+</Project>

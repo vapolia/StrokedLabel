@@ -1,0 +1,45 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:stroked="https://vapolia.eu/Vapolia.StrokedLabel"
+    x:Class="SampleApp.Views.MainPage"
+    Title="Stroked Labels Demo">
+    
+    <ScrollView>
+        <Grid RowDefinitions="*,40">
+            
+            <StackLayout Padding="30" Spacing="25">
+                <StackLayout.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="stroked:StrokedLabel.StrokeColor" Value="Blue" />
+                        <Setter Property="stroked:StrokedLabel.StrokeWidth" Value="4" />
+                    </Style>
+                </StackLayout.Resources>
+
+                <Label FontSize="32" HorizontalOptions="Center"
+                       Style="{StaticResource MauiLabel}"
+                       stroked:StrokedLabel.StrokeColor="Blue"
+                       stroked:StrokedLabel.StrokeWidth="4" 
+                       Text="Hello, World!" />
+
+                <Label FontSize="18" HorizontalOptions="Center"
+                    Style="{StaticResource MauiLabel}"
+                    stroked:StrokedLabel.StrokeColor="Green"
+                    stroked:StrokedLabel.StrokeWidth="4"
+                    Text="Welcome to .NET Multi-platform App UI" />
+
+                <Label x:Name="CounterLabel" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center"
+                    Style="{StaticResource MauiLabel}"
+                    Text="Current count: 0" />
+
+            </StackLayout>
+
+            <Grid Grid.Row="1" BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Primary}}">
+                <Label x:Name="VersionLabel" HorizontalOptions="Center" VerticalOptions="Center" 
+                       TextColor="{StaticResource White}" />
+            </Grid>
+            
+        </Grid>
+    </ScrollView>
+    
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vapolia.StrokedLabels", "Vapolia.StrokedLabels\Vapolia.StrokedLabels.csproj", "{8209A5CE-65C2-41B3-A43D-51022FD138A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publish", "Publish", "{B95D3C1A-DEE9-40D3-ADA7-C685BCACAB65}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main.yaml = .github\workflows\main.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{1F048D1B-9DE4-4A67-9494-EFA598B97F65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8209A5CE-65C2-41B3-A43D-51022FD138A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8209A5CE-65C2-41B3-A43D-51022FD138A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8209A5CE-65C2-41B3-A43D-51022FD138A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8209A5CE-65C2-41B3-A43D-51022FD138A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F048D1B-9DE4-4A67-9494-EFA598B97F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F048D1B-9DE4-4A67-9494-EFA598B97F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F048D1B-9DE4-4A67-9494-EFA598B97F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F048D1B-9DE4-4A67-9494-EFA598B97F65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
