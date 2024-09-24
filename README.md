@@ -47,7 +47,7 @@ Apply the behavior to a label:
        stroked:StrokedLabel.StrokeWidth="4"  />
 ```
 
-Apply the behavior through a style:
+Or apply the behavior through a style:
 ```xaml
 <StackLayout>
     <StackLayout.Resources>
