@@ -67,3 +67,8 @@ Apply the behavior through a style:
     <Label FontSize="32" Text="I like it so much!" />
 </StackLayout>
 ```
+
+# Limitations
+
+This behavior is working only with the Label's `Text` property. It does not work with the `FormattedText` property (nor `Span`s).
+An implementation could be made in the future by using [that code](https://github.com/santaevpavel/OutlineSpan/blob/master/OutlineSpanLib/src/main/kotlin/ru/santaev/outlinespan/OutlineSpan.kt) on android.
