@@ -1,4 +1,4 @@
-# Vapolia.StrokedLabel
+# Stroked Labels
 
 [![NuGet][nuget-img]][nuget-link]  
 ![Nuget](https://img.shields.io/nuget/dt/Vapolia.StrokedLabel)  
