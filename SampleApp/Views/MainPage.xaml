@@ -4,42 +4,55 @@
     xmlns:stroked="https://vapolia.eu/Vapolia.StrokedLabel"
     x:Class="SampleApp.Views.MainPage"
     Title="Stroked Labels Demo">
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="LightBlue" />
+            <Setter Property="stroked:StrokedLabel.StrokeColor" Value="DarkBlue" />
+            <Setter Property="stroked:StrokedLabel.StrokeWidth" Value="4" />
+        </Style>
+    </Page.Resources>
     
     <ScrollView>
-        <Grid RowDefinitions="*,40">
-            
-            <StackLayout Padding="30" Spacing="25">
-                <StackLayout.Resources>
-                    <Style TargetType="Label">
-                        <Setter Property="stroked:StrokedLabel.StrokeColor" Value="Blue" />
-                        <Setter Property="stroked:StrokedLabel.StrokeWidth" Value="4" />
-                    </Style>
-                </StackLayout.Resources>
+        <StackLayout Padding="30" Spacing="25">
 
-                <Label FontSize="32" HorizontalOptions="Center"
-                       Style="{StaticResource MauiLabel}"
-                       stroked:StrokedLabel.StrokeColor="Blue"
-                       stroked:StrokedLabel.StrokeWidth="4" 
-                       Text="Hello, World!" />
+            <Label FontSize="32" 
+                   HorizontalOptions="Center"
+                   Text="I like stoked labels!" />
 
-                <Label FontSize="18" HorizontalOptions="Center"
-                    Style="{StaticResource MauiLabel}"
-                    stroked:StrokedLabel.StrokeColor="Green"
-                    stroked:StrokedLabel.StrokeWidth="4"
-                    Text="Welcome to .NET Multi-platform App UI" />
-
-                <Label x:Name="CounterLabel" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center"
-                    Style="{StaticResource MauiLabel}"
-                    Text="Current count: 0" />
-
-            </StackLayout>
-
-            <Grid Grid.Row="1" BackgroundColor="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource Primary}}">
-                <Label x:Name="VersionLabel" HorizontalOptions="Center" VerticalOptions="Center" 
-                       TextColor="{StaticResource White}" />
+            <Grid>
+                <Image Source="sakura.jpg" Aspect="AspectFit" />
+                
+                <Label FontSize="40" 
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="Center"
+                       TextColor="Aquamarine"
+                       stroked:StrokedLabel.StrokeColor="Black"
+                       stroked:StrokedLabel.StrokeWidth="4"
+                       Text="Stroked text is much more readable when over a background image" />
             </Grid>
-            
-        </Grid>
+
+            <Label FontSize="20" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="DarkRed"
+                   stroked:StrokedLabel.StrokeColor="Red"
+                   stroked:StrokedLabel.StrokeWidth="1"
+                   Text="Stroked text can be emphasized without needing bold" />
+
+            <Label FontSize="24" 
+                   HorizontalTextAlignment="Center"
+                   TextColor="LightGoldenrodYellow"
+                   stroked:StrokedLabel.StrokeColor="LightCoral"
+                   stroked:StrokedLabel.StrokeWidth="1"
+                   Text="It can also glow with a shadow!">
+                <Label.Shadow>
+                    <Shadow Brush="Red"
+                            Offset="0,0"
+                            Radius="2"
+                            Opacity="0.8" />
+                </Label.Shadow>
+            </Label>
+
+        </StackLayout>
     </ScrollView>
     
 </ContentPage>

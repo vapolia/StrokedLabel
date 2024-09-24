@@ -148,10 +148,6 @@ internal class StrokedTextView(Context context) : MauiTextView(context), IStroke
 
             if (p != null)
             {
-                //Draw the inside
-                p.SetStyle(Android.Graphics.Paint.Style.Fill);
-                base.OnDraw(canvas);
-
                 //save the text color
                 var currentTextColor = CurrentTextColor;
 
@@ -163,6 +159,10 @@ internal class StrokedTextView(Context context) : MauiTextView(context), IStroke
 
                 //restore the text color
                 SetTextColor(new Android.Graphics.Color(currentTextColor));
+
+                //Draw the inside
+                p.SetStyle(Android.Graphics.Paint.Style.Fill);
+                base.OnDraw(canvas);
             }
         }
         finally
