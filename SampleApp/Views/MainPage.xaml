@@ -21,8 +21,8 @@
 
             <Grid>
                 <Image Source="sakura.jpg" Aspect="AspectFit" />
-                
-                <Label FontSize="40" 
+            
+                <Label FontSize="40"
                        HorizontalTextAlignment="Center"
                        VerticalOptions="Center"
                        TextColor="Aquamarine"
@@ -30,15 +30,15 @@
                        stroked:StrokedLabel.StrokeWidth="4"
                        Text="Stroked text is much more readable when over a background image" />
             </Grid>
-
-            <Label FontSize="20" 
+            
+            <Label FontSize="20"
                    HorizontalTextAlignment="Center"
                    TextColor="DarkRed"
                    stroked:StrokedLabel.StrokeColor="Red"
                    stroked:StrokedLabel.StrokeWidth="1"
                    Text="Stroked text can be emphasized without needing bold" />
-
-            <Label FontSize="24" 
+            
+            <Label FontSize="24"
                    HorizontalTextAlignment="Center"
                    TextColor="LightGoldenrodYellow"
                    stroked:StrokedLabel.StrokeColor="LightCoral"

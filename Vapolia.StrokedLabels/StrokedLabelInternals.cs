@@ -107,6 +107,8 @@ internal class StrokedTextView(Context context) : MauiTextView(context), IStroke
     private bool isDrawing;
     private int strokeWidth;
 
+    private bool HasStroke => !Equals(StrokeColor, KnownColor.Default) && !Equals(StrokeColor, KnownColor.Transparent) && strokeWidth > 0;
+
     public Color StrokeColor { get; set; } = (Color)StrokedLabel.StrokeColorProperty.DefaultValue;
     public int StrokeWidth
     {
@@ -119,8 +121,16 @@ internal class StrokedTextView(Context context) : MauiTextView(context), IStroke
             var p = Paint;
             if (p != null)
             {
-                p.SetStyle(Android.Graphics.Paint.Style.Stroke);
-                p.StrokeWidth = StrokeWidth;
+                if (HasStroke)
+                {
+                    p.SetStyle(Android.Graphics.Paint.Style.Stroke);
+                    p.StrokeWidth = StrokeWidth;
+                }
+                else
+                {
+                    p.SetStyle(Android.Graphics.Paint.Style.Fill);
+                    p.StrokeWidth = 0;
+                }
             }
         }
     }
@@ -130,12 +140,14 @@ internal class StrokedTextView(Context context) : MauiTextView(context), IStroke
         // Ignore invalidate() calls triggered by setTextColor(color) calls
         if(isDrawing)
             return;
+        
+        base.RequestLayout();
         base.Invalidate();
     }
 
     protected override void OnDraw(Canvas canvas)
     {
-        if (Equals(StrokeColor, KnownColor.Default) || Equals(StrokeColor, KnownColor.Transparent))
+        if (!HasStroke)
         {
             base.OnDraw(canvas);
             return;

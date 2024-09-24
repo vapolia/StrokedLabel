@@ -53,6 +53,7 @@
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageProjectUrl>https://github.com/vapolia/StrokedLabel</PackageProjectUrl>
         <PackageReleaseNotes>
+            1.0.1: Fix android
             1.0.0: Initial release
         </PackageReleaseNotes>
     </PropertyGroup>
