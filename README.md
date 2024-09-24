@@ -35,6 +35,8 @@ builder.UseStrokedLabelBehavior();
 
 See the SampleApp in this repo.
 
+# Usage
+
 Declare the namespace:
 ```xaml
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
