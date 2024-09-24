@@ -7,12 +7,6 @@
 ![image](https://github.com/user-attachments/assets/7551e1f0-01b0-49b7-8824-64b14957aad7)
 
 
-```cs
-dotnet add package Vapolia.StrokedLabel
-
-builder.UseStrokedLabelBehavior();
-```
-
 [nuget-link]: https://www.nuget.org/packages/Vapolia.StrokedLabel/
 [nuget-img]: https://img.shields.io/nuget/v/Vapolia.StrokedLabel
 
@@ -22,7 +16,11 @@ Platforms:
 
 # Quick start
 
-Add the above nuget package to your Maui project   
+Add the above nuget package to your Maui project
+```cs
+dotnet add package Vapolia.StrokedLabel
+```
+
 then add this line to your maui app builder:
 
 ```c#
@@ -30,10 +28,6 @@ using Vapolia.StrokedLabels;
 ...
 builder.UseStrokedLabelBehavior();
 ```
-
-# Examples
-
-See the SampleApp in this repo.
 
 # Usage
 
@@ -67,6 +61,10 @@ Apply the behavior through a style:
     <Label FontSize="32" Text="I like it so much!" />
 </StackLayout>
 ```
+
+# Examples
+
+See the SampleApp in this repo.
 
 # Limitations
 
