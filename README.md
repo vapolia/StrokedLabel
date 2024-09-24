@@ -4,6 +4,9 @@
 ![Nuget](https://img.shields.io/nuget/dt/Vapolia.StrokedLabel)  
 [![Publish To Nuget](https://github.com/vapolia/StrokedLabel/actions/workflows/main.yaml/badge.svg)](https://github.com/vapolia/StrokedLabel/actions/workflows/main.yaml)
 
+![image](https://github.com/user-attachments/assets/7551e1f0-01b0-49b7-8824-64b14957aad7)
+
+
 ```cs
 dotnet add package Vapolia.StrokedLabel
 
