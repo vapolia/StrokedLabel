@@ -7,8 +7,6 @@ namespace SampleApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
             UserAppTheme = PlatformAppTheme;
         }
 
@@ -16,6 +14,7 @@ namespace SampleApp
         {
             var window = base.CreateWindow(activationState);
             window.Title = "Stroked Label Demo App";
+            window.Page = new MainPage();
             return window;
         }
     }

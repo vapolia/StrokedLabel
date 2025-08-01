@@ -12,7 +12,8 @@
 
 Platforms:
 - Android
-- iOS
+- iOS, MacOS
+- Windows is a work in progress. The properties will be ignored for now.
 
 # Quick start
 
